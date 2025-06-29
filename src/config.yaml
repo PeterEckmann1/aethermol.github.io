@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Aethermol
+  site: 'https://aethermol.ai'
   base: '/'
   trailingSlash: false
 
