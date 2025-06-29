@@ -90,4 +90,3 @@ export default defineConfig({
 
   site: 'https://aethermol.ai'
 });
-
