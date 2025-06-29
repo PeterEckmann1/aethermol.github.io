@@ -88,5 +88,5 @@ export default defineConfig({
     },
   },
 
-  site: 'https://aethermol.ai'
+  site: 'https://aethermol.ai',
 });
