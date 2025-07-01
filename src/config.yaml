@@ -11,16 +11,12 @@ metadata:
   title:
     default: Aethermol
     template: '%s — Aethermol | AI-Driven Molecular Design'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Aethermol is an AI-driven molecular design tool for small molecule drug discovery."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
-    images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+    site_name: Aethermo
     type: website
   twitter:
     handle: '@onwidget'
@@ -69,4 +65,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
