@@ -3,12 +3,10 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import { Image } from 'astro:assets';
 import CompoundImage from '../assets/images/er_alpha_compounds.png';
-import LimoImage from '../assets/images/limo.png';
 import HeroImage from '../assets/images/splashimage.jpg';
 
 const metadata = {
@@ -39,7 +37,7 @@ const metadata = {
     <Fragment slot="title"> Aethermol </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline"> Physics-based small molecule drug design at the speed of AI </span>
+      <span class="hidden sm:inline"> Accelerating Drug Discovery with Physics-Guided Generative AI </span>
     </Fragment>
   </Hero>
 
@@ -110,63 +108,5 @@ const metadata = {
       width: CompoundImage.width,
       height: CompoundImage.height,
     }}
-  />
-
-  <!-- Content Widget LIMO **************** -->
-
-  <Content
-    tagline="Architecture"
-    title="Leveraging LIMO for drug design"
-    subtitle="Aethermol is based on <a href='https://proceedings.mlr.press/v162/eckmann22a.html' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Latent Inceptionism on Molecules (LIMO)</a>, a fast generative model for drug design."
-    imageTitle="LIMO architecture overview"
-    items={[
-      {
-        title: 'Trained on drug-like molecules',
-        description:
-          'LIMO is trained on <a href="https://enamine.net/compound-collections/real-compounds" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Enamine REAL</a>, a large dataset of synthesizable molecules. LIMO can also be trained on other datasets, such as hinge binders for kinases, to generate compounds with specific desired motifs.',
-      },
-      {
-        title: 'Fast generation',
-        description:
-          "LIMO's use of a fast gradient-based optimizer to generate compounds allows for rapid exploration of chemical space, enabling the generation of millions of candidates in a short time frame.",
-      },
-    ]}
-    image={{
-      src: LimoImage,
-      alt: 'LIMO architecture diagram',
-      width: LimoImage.width,
-      height: LimoImage.height,
-    }}
-  />
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Generation steps"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Train LIMO</span>',
-        description:
-          'Starting with a PDB structure of your target, we train LIMO on docking scores against that target. For the generative model, we can use the default LIMO trained on <a href="https://enamine.net/compound-collections/real-compounds" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Enamine REAL</a>, or fine-tune it using a specialized dataset with specific desired motifs.',
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Generate candidates</span>',
-        description: 'Use LIMO to generate millions of candidate compounds.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Filter candidates</span>',
-        description:
-          'Aggressively filter the generated candidates using a variety of criteria, such as synthetic accessibility, drug-likeness, logD, etc.',
-        icon: 'tabler:filter',
-      },
-      {
-        title: 'Step 4: <span class="font-medium">Score candidates with ABFE</span>',
-        description:
-          'Use ABFE calculations with <a href="https://github.com/GHeinzelmann/BAT.py" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">BAT.py</a> to identify the most promising candidates.',
-        icon: 'tabler:math-function',
-      },
-    ]}
   />
 </Layout>
