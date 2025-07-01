@@ -1,6 +1,6 @@
 site:
   name: Aethermol
-  site: 'https://aethermol.ai'
+  site: 'https://Aethermol'
   base: '/'
   trailingSlash: false
 
@@ -9,8 +9,8 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: Aethermol
+    template: '%s — Aethermol | AI-Driven Molecular Design'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
