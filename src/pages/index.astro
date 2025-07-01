@@ -6,10 +6,10 @@ import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 
-import { Image } from "astro:assets";
-import CompoundImage from "../assets/images/er_alpha_compounds.png";
-import LimoImage from "../assets/images/limo.png";
-import HeroImage from "../assets/images/splashimage.jpg";
+import { Image } from 'astro:assets';
+import CompoundImage from '../assets/images/er_alpha_compounds.png';
+import LimoImage from '../assets/images/limo.png';
+import HeroImage from '../assets/images/splashimage.jpg';
 
 const metadata = {
   title: 'Aethermol',
@@ -30,19 +30,17 @@ const metadata = {
           width={HeroImage.width}
           height={HeroImage.height}
         />
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-slate-900 to-transparent"></div>
+        <div
+          class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-slate-900 to-transparent"
+        >
+        </div>
       </div>
     </Fragment>
-    <Fragment slot="title">
-      Aethermol
-    </Fragment>
+    <Fragment slot="title"> Aethermol </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Physics-based small molecule drug design at the speed of AI
-      </span>
+      <span class="hidden sm:inline"> Physics-based small molecule drug design at the speed of AI </span>
     </Fragment>
-
   </Hero>
 
   <!-- Features Widget *************** -->
@@ -110,15 +108,14 @@ const metadata = {
       src: CompoundImage,
       alt: 'Generated compounds for estrogen receptor alpha',
       width: CompoundImage.width,
-      height: CompoundImage.height
+      height: CompoundImage.height,
     }}
-  >
-  </Content>
+  />
 
   <!-- Content Widget LIMO **************** -->
 
   <Content
-    tagline="Architecture" 
+    tagline="Architecture"
     title="Leveraging LIMO for drug design"
     subtitle="Aethermol is based on <a href='https://proceedings.mlr.press/v162/eckmann22a.html' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Latent Inceptionism on Molecules (LIMO)</a>, a fast generative model for drug design."
     imageTitle="LIMO architecture overview"
@@ -131,17 +128,16 @@ const metadata = {
       {
         title: 'Fast generation',
         description:
-          'LIMO\'s use of a fast gradient-based optimizer to generate compounds allows for rapid exploration of chemical space, enabling the generation of millions of candidates in a short time frame.',
+          "LIMO's use of a fast gradient-based optimizer to generate compounds allows for rapid exploration of chemical space, enabling the generation of millions of candidates in a short time frame.",
       },
     ]}
     image={{
       src: LimoImage,
       alt: 'LIMO architecture diagram',
       width: LimoImage.width,
-      height: LimoImage.height
+      height: LimoImage.height,
     }}
-  >
-  </Content>
+  />
 
   <!-- Steps Widget ****************** -->
 
@@ -151,13 +147,12 @@ const metadata = {
       {
         title: 'Step 1: <span class="font-medium">Train LIMO</span>',
         description:
-          "Starting with a PDB structure of your target, we train LIMO on docking scores against that target. For the generative model, we can use the default LIMO trained on <a href=\"https://enamine.net/compound-collections/real-compounds\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">Enamine REAL</a>, or fine-tune it using a specialized dataset with specific desired motifs.",
+          'Starting with a PDB structure of your target, we train LIMO on docking scores against that target. For the generative model, we can use the default LIMO trained on <a href="https://enamine.net/compound-collections/real-compounds" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Enamine REAL</a>, or fine-tune it using a specialized dataset with specific desired motifs.',
         icon: 'tabler:package',
       },
       {
         title: 'Step 2: <span class="font-medium">Generate candidates</span>',
-        description:
-          'Use LIMO to generate millions of candidate compounds.',
+        description: 'Use LIMO to generate millions of candidate compounds.',
         icon: 'tabler:rocket',
       },
       {
@@ -174,5 +169,4 @@ const metadata = {
       },
     ]}
   />
-
 </Layout>
