@@ -11,7 +11,7 @@ metadata:
   title:
     default: Aethermol
     template: '%s — Aethermol | AI-Driven Molecular Design'
-  description: "Aethermol is an AI-driven molecular design tool for small molecule drug discovery."
+  description: 'Aethermol is an AI-driven molecular design tool for small molecule drug discovery.'
   robots:
     index: true
     follow: true
