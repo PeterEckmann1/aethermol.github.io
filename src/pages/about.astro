@@ -7,69 +7,198 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Aethermol',
 };
+
+// Co-founder images and profiles
+const coFounders = [
+  {
+    name: 'Peter Eckmann',
+    role: 'Co-founder',
+    description: 'Expert in AI and drug discovery. Leading the technical development of Aethermol\'s AI platform.',
+    image: 'https://github.com/PeterEckmann1.png',
+    links: [
+      { url: 'https://petereckmann1.github.io/', label: 'Website' },
+      { url: 'https://github.com/PeterEckmann1', label: 'GitHub' }
+    ]
+  },
+  {
+    name: 'Rose Yu',
+    role: 'Co-founder',
+    description: 'Pioneer in scientific machine learning. Bringing expertise in physics-guided deep learning to Aethermol.',
+    image: 'https://roseyu.com/images/profile.jpg',
+    links: [
+      { url: 'https://roseyu.com/', label: 'Website' }
+    ]
+  }
+];
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About Aethermol"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/splashimage.jpg',
+      alt: 'Aethermol Drug Discovery',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      Revolutionizing Drug Discovery with <br />
+      <span class="text-accent dark:text-white">Generative AI Innovation</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Founded by experts in  machine learning and chemical science, Aethermol is dedicated to accelerating 
+      drug discovery through innovative AI solutions. Our platform combines cutting-edge generative AI techniques 
+      with deep understanding of molecular dynamics to create more effective, safer therapeutics.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Features2 Widget ************** -->
 
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+  <Features2
+    title="Our Founders"
+    subtitle="Meet the team behind Aethermol"
+    columns={2}
+    items={[
+      {
+        title: 'Peter Eckmann',
+        description: coFounders[0].description,
+        icon: 'tabler:code',
+        callToAction: {
+          target: '_blank',
+          text: 'Learn More',
+          href: 'https://petereckmann1.github.io/',
+        }
+      },
+      {
+        title: 'Rose Yu',
+        description: coFounders[1].description,
+        icon: 'tabler:brain',
+        callToAction: {
+          target: '_blank',
+          text: 'Learn More',
+          href: 'https://roseyu.com/',
+        }
+      },
     ]}
   />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Scientific Advisory Board"
+    subtitle="Expert guidance shaping our scientific direction"
+    columns={1}
+    items={[
+      {
+        title: 'Michael K. Gilson, Ph.D.',
+        description: 'Professor of Pharmaceutical Sciences at UC San Diego and expert in computational chemistry and drug discovery. Dr. Gilson brings decades of experience in molecular modeling, binding thermodynamics, and computer-aided drug design to guide Aethermol\'s scientific strategy.',
+        icon: 'tabler:flask',
+        callToAction: {
+          target: '_blank',
+          text: 'Learn More',
+          href: 'https://gilson.cloud.ucsd.edu/',
+        }
+      }
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    title="Our Impact"
+    stats={[
+      { title: 'Compounds Generated', amount: '1M+' },
+      { title: 'Drug Targets', amount: '100+' },
+      { title: 'Success Rate', amount: '85%' },
+      { title: 'Research Papers', amount: '25+' },
+    ]}
+  /> -->
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Our Technology"
+    subtitle="Discover how Aethermol is transforming drug discovery through innovative AI solutions"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Advanced AI Models',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Our proprietary AI models combine deep learning with molecular dynamics to predict drug-target interactions with unprecedented accuracy.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Interior Design',
+        title: 'Molecular Design',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Generate novel drug candidates optimized for efficacy, safety, and synthesizability using our advanced molecular design algorithms.',
+        icon: 'tabler:atom',
       },
       {
-        title: 'Photography',
+        title: 'Rapid Iteration',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Accelerate the drug discovery process through rapid iteration and optimization of promising compounds.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Values"
+    subtitle="At Aethermol, our work is guided by these core principles"
+    items={[
+      {
+        title: 'Scientific Excellence',
+        description:
+          'We maintain the highest standards of scientific rigor in our research and development, ensuring reliable and reproducible results.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Innovation',
+        description:
+          'We continuously push the boundaries of AI and computational chemistry to develop novel solutions for drug discovery.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Impact',
+        description:
+          'Our ultimate goal is to make a meaningful impact on human health by accelerating the development of effective therapeutics.',
+        icon: 'tabler:heart',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Research Impact"
+    subtitle="Our contributions to the field of AI-powered drug discovery"
+    isReversed={true}
+    items={[
+      {
+        title: 'Publications',
+        description: 'Our team regularly publishes research findings in top-tier conferences and journals, advancing the field of AI in drug discovery.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Collaborations',
+        description:
+          'Partnering with leading research institutions and pharmaceutical companies to validate and implement our technology.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Open Science',
+        description:
+          'Contributing to the scientific community through open-source tools and datasets, all available on our GitHub.',
+        icon: 'tabler:share',
       },
     ]}
   />
@@ -77,151 +206,96 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    columns={3}
-    isAfterContent={true}
+    title="Key Publications"
+    subtitle="Selected research papers from our team"
+    columns={1}
     items={[
       {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+        title: 'MF-LAL: Drug Compound Generation Using Multi-Fidelity Latent Space Active Learning',
+        description: 'Eckmann P, Wu D, Heinzelmann G, Gilson MK, Yu R (2025). International Conference on Machine Learning (ICML)',
+        icon: 'tabler:file-text',
+        callToAction: {
+          text: 'Read Paper',
+          href: 'https://arxiv.org/pdf/2410.11226',
+          target: '_blank'
+        }
       },
       {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+        title: 'MFBind: a Multi-Fidelity Approach for Evaluating Drug Compounds in Practical Generative Modeling',
+        description: 'Eckmann P, Wu D, Heinzelmann G, Gilson MK, Yu R (2024). arXiv:2402.10387',
+        icon: 'tabler:file-text',
+        callToAction: {
+          text: 'Read Paper',
+          href: 'https://petereckmann1.github.io/files/mfbind.pdf',
+          target: '_blank'
+        }
       },
       {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
+        title: 'LIMO: Latent Inceptionism for Targeted Molecule Generation',
+        description: 'Eckmann P, Sun K, Zhao B, Feng M, Gilson MK, Yu R (2022). International Conference on Machine Learning (ICML)',
+        icon: 'tabler:file-text',
+        callToAction: {
+          text: 'Read Paper',
+          href: 'https://petereckmann1.github.io/files/limo.pdf',
+          target: '_blank'
+        }
+      }
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
+  <Features3
+    subtitle="Patents and Technical Reports"
+    columns={1}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Computational architecture to generate representations of molecules having targeted properties',
+        description: 'Yu R, Eckmann P, Sun K, Zhao B, Feng M, Gilson MK (2023). United States patent pending US20240005179A1',
+        icon: 'tabler:certificate',
+        callToAction: {
+          text: 'View Patent',
+          href: 'https://patents.google.com/patent/US20240005179A1/en',
+          target: '_blank'
+        }
       },
       {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
+        title: 'Improving the properties of molecules generated by LIMO',
+        description: 'Thumuluri V, Eckmann P, Gilson MK, Yu R (2024). Technical Report. arXiv:2407.14968',
+        icon: 'tabler:file-text',
+        callToAction: {
+          text: 'Read Report',
+          href: 'https://petereckmann1.github.io/files/2407.14968v1.pdf',
+          target: '_blank'
+        }
+      }
     ]}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get in Touch"
+    subtitle="Interested in learning more about our technology or discussing collaboration opportunities?"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Contact Us',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+          'Reach out to discuss how Aethermol can accelerate your drug discovery projects.',
         icon: 'tabler:messages',
+        callToAction: {
+          text: 'Get in Touch',
+          href: '/contact',
+        }
       },
       {
-        title: 'Call us',
+        title: 'Research',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Learn more about our technology and research through our published work.',
+        icon: 'tabler:notebook',
+        callToAction: {
+          text: 'View Publications',
+          href: '#',
+        }
       },
     ]}
   />

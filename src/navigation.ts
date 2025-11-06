@@ -1,15 +1,36 @@
 export const headerData = {
-  links: [],
-  actions: [],
+  links: [
+    {
+      text: 'Home',
+      href: '/',
+    },
+    {
+      text: 'About',
+      href: '/about',
+    },
+    {
+      text: 'Contact',
+      href: '/contact',
+    },
+  ],
+  actions: [
+    {
+      text: 'Contact Us',
+      href: '/contact',
+      type: 'button',
+    },
+  ],
 };
 
 export const footerData = {
   links: [],
-  secondaryLinks: [],
-  socialLinks: [],
-  footNote: `
-    Founded by <a href="https://petereckmann1.github.io/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Peter Eckmann</a>, 
-    <a href="https://gilson.cloud.ucsd.edu/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Michael K. Gilson</a>, 
-    and <a href="https://roseyu.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Rose Yu</a>.
-  `,
+  secondaryLinks: [
+    { text: 'Terms', href: '/terms' },
+    { text: 'Privacy Policy', href: '/privacy' }
+  ],
+  socialLinks: [
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
+    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/PeterEckmann1/aethermol.github.io' }
+  ],
 };
