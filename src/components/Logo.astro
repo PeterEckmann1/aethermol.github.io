@@ -1,11 +1,11 @@
 ---
 import { SITE } from 'astrowind:config';
-import GeminiLogo from '~/assets/images/Gemini_logo_transparent.png';
+import LogoLight from '~/assets/images/aethermol-lockup-light.svg';
+import LogoDark from '~/assets/images/aethermol-lockup-dark.svg';
 ---
 
 <div class="flex items-center">
-  <img src={GeminiLogo.src} alt={`${SITE?.name} logo`} class="h-8 w-auto mr-2 dark:invert" />
-  <span class="self-center text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-    {SITE?.name}
-  </span>
+  <img src={LogoLight.src} alt={`${SITE?.name} logo`} class="h-8 w-auto mr-2 dark:hidden" />
+  <img src={LogoDark.src} alt={`${SITE?.name} logo`} class="hidden h-8 w-auto mr-2 dark:inline-block" />
+  <span class="sr-only">{SITE?.name}</span>
 </div>
