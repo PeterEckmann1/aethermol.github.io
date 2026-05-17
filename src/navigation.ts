@@ -1,4 +1,9 @@
-export const headerData = {
+import type { CallToAction } from '~/types';
+
+export const headerData: {
+  links: Array<{ text: string; href: string }>;
+  actions: CallToAction[];
+} = {
   links: [
     {
       text: 'Home',
@@ -26,11 +31,11 @@ export const footerData = {
   links: [],
   secondaryLinks: [
     { text: 'Terms', href: '/terms' },
-    { text: 'Privacy Policy', href: '/privacy' }
+    { text: 'Privacy Policy', href: '/privacy' },
   ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
     { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/PeterEckmann1/aethermol.github.io' }
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/PeterEckmann1/aethermol.github.io' },
   ],
 };

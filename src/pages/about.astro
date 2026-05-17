@@ -2,7 +2,6 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -15,22 +14,21 @@ const coFounders = [
   {
     name: 'Peter Eckmann',
     role: 'Co-founder',
-    description: 'Expert in AI and drug discovery. Leading the technical development of Aethermol\'s AI platform.',
+    description: "Expert in AI and drug discovery. Leading the technical development of Aethermol's AI platform.",
     image: 'https://github.com/PeterEckmann1.png',
     links: [
       { url: 'https://petereckmann1.github.io/', label: 'Website' },
-      { url: 'https://github.com/PeterEckmann1', label: 'GitHub' }
-    ]
+      { url: 'https://github.com/PeterEckmann1', label: 'GitHub' },
+    ],
   },
   {
     name: 'Rose Yu',
     role: 'Co-founder',
-    description: 'Pioneer in scientific machine learning. Bringing expertise in physics-guided deep learning to Aethermol.',
+    description:
+      'Pioneer in scientific machine learning. Bringing expertise in physics-guided deep learning to Aethermol.',
     image: 'https://roseyu.com/images/profile.jpg',
-    links: [
-      { url: 'https://roseyu.com/', label: 'Website' }
-    ]
-  }
+    links: [{ url: 'https://roseyu.com/', label: 'Website' }],
+  },
 ];
 ---
 
@@ -50,9 +48,9 @@ const coFounders = [
     </Fragment>
 
     <Fragment slot="subtitle">
-      Founded by experts in  machine learning and chemical science, Aethermol is dedicated to accelerating 
-      drug discovery through innovative AI solutions. Our platform combines cutting-edge generative AI techniques 
-      with deep understanding of molecular dynamics to create more effective, safer therapeutics.
+      Founded by experts in machine learning and chemical science, Aethermol is dedicated to accelerating drug discovery
+      through innovative AI solutions. Our platform combines cutting-edge generative AI techniques with deep
+      understanding of molecular dynamics to create more effective, safer therapeutics.
     </Fragment>
   </Hero>
 
@@ -71,7 +69,7 @@ const coFounders = [
           target: '_blank',
           text: 'Learn More',
           href: 'https://petereckmann1.github.io/',
-        }
+        },
       },
       {
         title: 'Rose Yu',
@@ -81,7 +79,7 @@ const coFounders = [
           target: '_blank',
           text: 'Learn More',
           href: 'https://roseyu.com/',
-        }
+        },
       },
     ]}
   />
@@ -95,14 +93,15 @@ const coFounders = [
     items={[
       {
         title: 'Michael K. Gilson, Ph.D.',
-        description: 'Professor of Pharmaceutical Sciences at UC San Diego and expert in computational chemistry and drug discovery. Dr. Gilson brings decades of experience in molecular modeling, binding thermodynamics, and computer-aided drug design to guide Aethermol\'s scientific strategy.',
+        description:
+          "Professor of Pharmaceutical Sciences at UC San Diego and expert in computational chemistry and drug discovery. Dr. Gilson brings decades of experience in molecular modeling, binding thermodynamics, and computer-aided drug design to guide Aethermol's scientific strategy.",
         icon: 'tabler:flask',
         callToAction: {
           target: '_blank',
           text: 'Learn More',
           href: 'https://gilson.cloud.ucsd.edu/',
-        }
-      }
+        },
+      },
     ]}
   />
 
@@ -147,8 +146,6 @@ const coFounders = [
     ]}
   />
 
-
-
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
@@ -185,7 +182,8 @@ const coFounders = [
     items={[
       {
         title: 'Publications',
-        description: 'Our team regularly publishes research findings in top-tier conferences and journals, advancing the field of AI in drug discovery.',
+        description:
+          'Our team regularly publishes research findings in top-tier conferences and journals, advancing the field of AI in drug discovery.',
         icon: 'tabler:book',
       },
       {
@@ -212,13 +210,14 @@ const coFounders = [
     items={[
       {
         title: 'MF-LAL: Drug Compound Generation Using Multi-Fidelity Latent Space Active Learning',
-        description: 'Eckmann P, Wu D, Heinzelmann G, Gilson MK, Yu R (2025). International Conference on Machine Learning (ICML)',
+        description:
+          'Eckmann P, Wu D, Heinzelmann G, Gilson MK, Yu R (2025). International Conference on Machine Learning (ICML)',
         icon: 'tabler:file-text',
         callToAction: {
           text: 'Read Paper',
           href: 'https://arxiv.org/pdf/2410.11226',
-          target: '_blank'
-        }
+          target: '_blank',
+        },
       },
       {
         title: 'MFBind: a Multi-Fidelity Approach for Evaluating Drug Compounds in Practical Generative Modeling',
@@ -227,19 +226,20 @@ const coFounders = [
         callToAction: {
           text: 'Read Paper',
           href: 'https://petereckmann1.github.io/files/mfbind.pdf',
-          target: '_blank'
-        }
+          target: '_blank',
+        },
       },
       {
         title: 'LIMO: Latent Inceptionism for Targeted Molecule Generation',
-        description: 'Eckmann P, Sun K, Zhao B, Feng M, Gilson MK, Yu R (2022). International Conference on Machine Learning (ICML)',
+        description:
+          'Eckmann P, Sun K, Zhao B, Feng M, Gilson MK, Yu R (2022). International Conference on Machine Learning (ICML)',
         icon: 'tabler:file-text',
         callToAction: {
           text: 'Read Paper',
           href: 'https://petereckmann1.github.io/files/limo.pdf',
-          target: '_blank'
-        }
-      }
+          target: '_blank',
+        },
+      },
     ]}
   />
 
@@ -249,13 +249,14 @@ const coFounders = [
     items={[
       {
         title: 'Computational architecture to generate representations of molecules having targeted properties',
-        description: 'Yu R, Eckmann P, Sun K, Zhao B, Feng M, Gilson MK (2023). United States patent pending US20240005179A1',
+        description:
+          'Yu R, Eckmann P, Sun K, Zhao B, Feng M, Gilson MK (2023). United States patent pending US20240005179A1',
         icon: 'tabler:certificate',
         callToAction: {
           text: 'View Patent',
           href: 'https://patents.google.com/patent/US20240005179A1/en',
-          target: '_blank'
-        }
+          target: '_blank',
+        },
       },
       {
         title: 'Improving the properties of molecules generated by LIMO',
@@ -264,9 +265,9 @@ const coFounders = [
         callToAction: {
           text: 'Read Report',
           href: 'https://petereckmann1.github.io/files/2407.14968v1.pdf',
-          target: '_blank'
-        }
-      }
+          target: '_blank',
+        },
+      },
     ]}
   />
 
@@ -279,23 +280,21 @@ const coFounders = [
     items={[
       {
         title: 'Contact Us',
-        description:
-          'Reach out to discuss how Aethermol can accelerate your drug discovery projects.',
+        description: 'Reach out to discuss how Aethermol can accelerate your drug discovery projects.',
         icon: 'tabler:messages',
         callToAction: {
           text: 'Get in Touch',
           href: '/contact',
-        }
+        },
       },
       {
         title: 'Research',
-        description:
-          'Learn more about our technology and research through our published work.',
+        description: 'Learn more about our technology and research through our published work.',
         icon: 'tabler:notebook',
         callToAction: {
           text: 'View Publications',
           href: '#',
-        }
+        },
       },
     ]}
   />
