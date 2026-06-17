@@ -108,4 +108,80 @@ const metadata = {
       height: CompoundImage.height,
     }}
   />
+
+  <!-- Interactive Demo Section ******************* -->
+
+  <section id="demo-interactive" class="py-16 md:py-20 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+        >
+          Interactive LIMO Demo
+        </h2>
+        <p class="text-xl text-muted dark:text-slate-300 mb-8">
+          Experience LIMO's molecular generation capabilities with our live interactive demo
+        </p>
+      </div>
+
+      <div class="w-full">
+        <div
+          class="rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700"
+        >
+          <div class="relative">
+            <iframe
+              src="https://limo-demo-app.nrp-nautilus.io/demo-page"
+              title="LIMO Interactive Demo"
+              class="w-full h-screen min-h-[800px]"
+              style="height: 80vh; border: none;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              loading="lazy"
+              onload="this.style.display='block'; this.nextElementSibling.style.display='none';"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"></iframe>
+            <div
+              class="flex items-center justify-center h-screen min-h-[800px] bg-gray-100 dark:bg-slate-800"
+              style="display: none;"
+            >
+              <div class="text-center">
+                <div class="text-6xl mb-4">🚀</div>
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Demo Currently Unavailable</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                  The interactive demo is temporarily unavailable. Please try again later.
+                </p>
+                <div
+                  class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-slate-700/50 max-w-md mx-auto"
+                >
+                  <h4 class="text-lg font-semibold text-blue-300 mb-4">Available Features:</h4>
+                  <ul class="text-left space-y-2 text-slate-200">
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">•</span>
+                      <span>Molecular property sliders</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">•</span>
+                      <span>3D molecular visualization</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">•</span>
+                      <span>AI-powered chat support</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-primary mr-2">•</span>
+                      <span>Interactive binding analysis</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <p class="text-sm text-muted dark:text-slate-400">
+            Interact with molecular sliders, view 3D structures, and explore AI-powered chat support
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
